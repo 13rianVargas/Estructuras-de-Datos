@@ -1,14 +1,15 @@
+package BibliotecaListaSimple;
 public class Nodo {
     
-    private Alumno Dato;
+    private Estudiante Dato;
     private Nodo Next;
 
-    public Nodo (Alumno Dat, Nodo sig){
+    public Nodo (Estudiante Dat, Nodo sig){
         Dato = Dat;
         Next = sig;
     }
     
-    public Alumno getDato(){
+    public Estudiante getDato(){
         return Dato;
     }
     
@@ -16,7 +17,7 @@ public class Nodo {
         return Next;
     }
     
-    public void setDato(Alumno elem){
+    public void setDato(Estudiante elem){
         Dato = elem;
     }
     

@@ -1,3 +1,4 @@
+package AlumnosListaSimple;
 public class Alumno {
     String nombre;
     int edad;

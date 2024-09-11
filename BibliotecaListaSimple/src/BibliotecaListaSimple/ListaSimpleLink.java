@@ -1,3 +1,4 @@
+package BibliotecaListaSimple;
 public class ListaSimpleLink {
    
     private Nodo primero;
@@ -6,12 +7,12 @@ public class ListaSimpleLink {
         primero = null;
     }
      
-    public void insertInicio (Alumno Dat){
+    public void insertInicio (Estudiante Dat){
         Nodo nuevo = new Nodo (Dat, primero);
         primero = nuevo;
     } 
     
-     public void insertFinal (Alumno Dat){ 
+     public void insertFinal (Estudiante Dat){ 
         Nodo nuevo = new Nodo(Dat, null);
         if (primero == null){
         primero = nuevo;
@@ -26,6 +27,16 @@ public class ListaSimpleLink {
         }
     }
     
+    public int ContarElementos(){
+        int Cant = 0;
+        Nodo actual = primero;
+            while (actual!= null){
+                Cant++;
+                actual = actual.getSig();
+            }
+        return Cant;
+    }
+
     public int ContarElementos(char sex){
         int Cant = 0;
         Nodo actual = primero;
@@ -67,26 +78,49 @@ public class ListaSimpleLink {
               return false;   
     } 
      
-    public void MostarLista(){
+    public void mostarLista(){
 
         Nodo actual = primero;
         while (actual!= null){
             System.out.println(actual.getDato());
             actual = actual.getSig();
         }
-    } 
+    }
 
-    public double calcularEdadPromedio(){
+    public void mostarListaSuperiores(double promedio){
 
-        int sumaEdad = 0;
+        Nodo actual = primero;
+        while (actual!= null){
+            if (actual.getDato().getLibrosConsultados() > promedio) {
+                System.out.println("<> <> " + actual.getDato().getNombre() + " => " + actual.getDato().getLibrosConsultados() + " libros consultados <> <>");
+            }
+            actual = actual.getSig();
+        }
+    }
+
+    public double calcularPromedio(){
+        int suma = 0;
         int cont = 0;
         Nodo actual = primero;
         while (actual!= null){
-            sumaEdad += actual.getDato().getEdad();
+            suma += actual.getDato().getLibrosConsultados();
             cont++;
             actual = actual.getSig();
         }
+        return suma/cont;
+    }
 
-        return sumaEdad/cont;
+    public Estudiante calcularMayorConsulta(){
+        int max = 0;
+        Nodo actual = primero;
+        Estudiante mayor = actual.getDato();
+        while (actual!= null){
+            if (actual.getDato().getLibrosConsultados() > max) {
+                max = actual.getDato().getLibrosConsultados();
+                mayor = actual.getDato();
+            }
+            actual = actual.getSig();
+        }
+        return mayor;
     }
 }
