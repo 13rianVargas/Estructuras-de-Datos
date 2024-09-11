@@ -8,28 +8,28 @@ public class AlumnosListaSimple {
         int edad = 23;
         char sexo = 'M';
         String programa = "Ingeniería de Sistemas";
-        Estudiante alumno1 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno1 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertInicio(alumno1);
 
         nombre= "Aleja";
         edad = 21;
         sexo = 'F';
         programa = "Ingeniería de Sistemas";
-        Estudiante alumno2 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno2 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertInicio(alumno2);
 
         nombre= "Sharina";
         edad = 19;
         sexo = 'F';
         programa = "Ingeniería de Sistemas";
-        Estudiante alumno3 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno3 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertInicio(alumno3);
 
         nombre= "Camilo";
         edad = 19;
         sexo = 'M';
         programa = "Ingeniería de Sistemas";
-        Estudiante alumno4 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno4 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertInicio(alumno4);
 
         listaSimpleLink.MostarLista();
@@ -46,14 +46,14 @@ public class AlumnosListaSimple {
         edad = 21;
         sexo = 'F';
         programa = "Ingeniería de Sistemas";
-        Estudiante alumno5 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno5 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertFinal(alumno5);
 
         nombre= "Steven";
         edad = 23;
         sexo = 'M';
         programa = "Psicología";
-        Estudiante alumno6 = new Estudiante(nombre, edad, sexo, programa);
+        Alumno alumno6 = new Alumno(nombre, edad, sexo, programa);
         listaSimpleLink.insertFinal(alumno6);
 
         listaSimpleLink.MostarLista();
