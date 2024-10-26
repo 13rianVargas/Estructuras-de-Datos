@@ -1,0 +1,3 @@
+[submodule "BibliotecaHashTable"]
+	path = BibliotecaHashTable
+	url = https://github.com/13rianVargas/BibliotecaHashTable
