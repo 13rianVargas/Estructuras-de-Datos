@@ -1,3 +1,6 @@
 [submodule "BibliotecaHashTable"]
 	path = BibliotecaHashTable
 	url = https://github.com/13rianVargas/BibliotecaHashTable
+[submodule "ProyectoCalculoHerencias"]
+	path = ProyectoCalculoHerencias
+	url = https://github.com/Alejandraqt/ProyectoCalculoHerencias
